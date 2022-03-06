@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+    <head>
+        <title>Hi Badsa</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo"> 
+                    Photo<span>Pi</span>X
+                </div>
+                <div class="menu">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-search"></i>
+                    <a href="#">Login</a>
+                </div>
+            </nav>
+            <section class="h-text">
+                <i class="fa fa-camera" id="camera"></i>
+                <h1>Capturing the moments that captivate your heart.</h1>
+                <input type="text" name="" placeholder="Search Here...">
+                <button><i class="fa fa-search"></i></button>
+                    
+            </section>
+            
+        </header>
+        <section class="filter-gallery">
+            <div class="portfolio-menu">
+                <ul>
+                    <li class="active" data-filter="*">All</li>
+                    <li data-filter=".nature">Nature</li>
+                    <li data-filter=".fashion">Fashion</li>
+                    <li data-filter=".wedding">Wedding</li>
+                </ul>
+            </div>
+            <div class="portfolio-item">
+                <div class="item nature">
+                    <img src="img/p1.jpg" alt="nature image" width="100" height="100">
+                </div>
+                <div class="item fashion">
+                    <img src="img/p2.jpg" alt="fashion image" width="100" height="100">
+                </div>
+                <div class="item wedding">
+                    <img src="img/p3.jpg" alt="wedding image" width="100" height="100">
+                </div>
+                <div class="item nature">
+                    <img src="img/p4.jpg" alt="nature image" width="100" height="100">
+                </div>
+                <div class="item fashion">
+                    <img src="img/p5.jpg" alt="fashion image" width="100" height="100">
+                </div>
+                <div class="item wedding">
+                    <img src="img/p6.jpg" alt="wedding image" width="100" height="100">
+                </div>
+                <div class="item nature">
+                    <img src="img/p7.jpg" alt="nature image" width="100" height="100">
+                </div>
+                <div class="item fashion">
+                    <img src="img/p8.jpg" alt="fashion image" width="100" height="100">
+                </div>
+                <div class="item wedding">
+                    <img src="img/p9.jpg" alt="wedding image" width="100" height="100">
+                </div>
+            </div>
+    
+        </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript">
+        $('.portfolio-item').isotope({
+  // options
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});
+        $('.portfolio-menu ul li').click(function(){
+		$('.portfolio-menu ul li').removeClass('active');
+		$(this).addClass('active');
+            
+        var selector = $(this).attr('data-filter');
+		$('.portfolio-item').isotope({
+			filter:selector
+		});
+		return false;
+    });
+
+
+    </script>
+    </body>
+
+</html>

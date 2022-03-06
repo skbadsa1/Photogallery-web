@@ -1,0 +1,4 @@
+fontawesome bootstrapcdn
+isotopejquery
+jquery cdn
+https://isotope.metafizzy.co/#cdn
